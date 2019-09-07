@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel='stylesheet' href='main.css'>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat:300&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class='container'>
+      <img src='img/me.jpg' alt='me' />
+      <div>
+        <div>
+          <h1>hi, i'm autumn.</h1>
+          <p>i'm a frontend-focused fullstack software engineer. i currently work at 
+            <a href='https://ezcater.com' style='color: #88bb40'>ezcater</a>
+            (and used to work at <a href='https://cloudcity.io' style='color: #ed5f0d'>cloud city</a> and
+            <a href='https://zoomi.ai' style='color: #28489B'>zoomi.</a>). in my free time i make music.
+          </p>
+
+          <p>read my code on <a href='https://github.com/mxtetrachord'>github</a>, chat with me on
+            <a href='https://twitter.com/mxtetrachord'>twitter</a>, look at my selfies on
+            <a href='https://instagram.com/mxtetrachord'>instagram</a>, and listen to my music...somewhere soon, hopefully.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var keypresses = []
+      var konami = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13].toString()
+
+      document.body.addEventListener('keyup', function(event) {
+        keypresses.push(event.keyCode)
+        if (keypresses.length < 11) return
+
+        var lastEleven = keypresses.slice(keypresses.length - 11).toString()
+        if (lastEleven === konami) document.body.className = 'gradient'
+      })
+    </script>
+  </body>
+</html>
