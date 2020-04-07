@@ -11,21 +11,31 @@
       <div>
         <div>
           <h1>hi, i'm autumn.</h1>
-          <p>i'm a frontend-focused fullstack software engineer. i currently work at 
+          <p>i'm a frontend javascript engineer and sometimes team lead. i just finished up at 
             <a href='https://ezcater.com' style='color: #88bb40'>ezcater</a>
-            (and used to work at <a href='https://cloudcity.io' style='color: #ed5f0d'>cloud city</a> and
-            <a href='https://zoomi.ai' style='color: #28489B'>zoomi.</a>). in my free time i make music.
+            (and before that, used to work at <a href='https://cloudcity.io' style='color: #ed5f0d'>cloud city</a> and
+            <a href='https://zoomi.ai' style='color: #28489B'>zoomi.</a>). in my free time i make music, read tarot, and
+            play video games.
           </p>
 
           <p>read my code on <a href='https://github.com/mxtetrachord'>github</a>, chat with me on
             <a href='https://twitter.com/mxtetrachord'>twitter</a>, look at my selfies on
-            <a href='https://instagram.com/mxtetrachord'>instagram</a>, and listen to my music...somewhere soon, hopefully.
+            <a href='https://instagram.com/mxtetrachord'>instagram</a>, and listen to my music on
+            <a href='https://autumngrace.bandcamp.com'>bandcamp</a>.
           </p>
         </div>
       </div>
     </div>
 
     <script>
+      function toggleGradient() {
+        if(document.body.classList[0] === 'gradient') {
+          document.body.className = ''
+        } else {
+          document.body.className = 'gradient'
+        }
+      }
+
       var keypresses = []
       var konami = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13].toString()
 
@@ -34,7 +44,7 @@
         if (keypresses.length < 11) return
 
         var lastEleven = keypresses.slice(keypresses.length - 11).toString()
-        if (lastEleven === konami) document.body.className = 'gradient'
+        if (lastEleven === konami) toggleGradient()
       })
     </script>
   </body>
